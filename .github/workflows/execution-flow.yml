@@ -75,3 +75,12 @@ jobs:
         run: ls
       - name: Deploy
         run: echo "Deploying..."
+  report: 
+   needs: [lint, build]
+   if: failure()
+   on: ubuntu-latest
+   steps:
+     - name: Output information
+       run: |
+         echo "run if job fail"
+         echo " run when any job fails"
