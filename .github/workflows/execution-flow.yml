@@ -83,4 +83,4 @@ jobs:
      - name: Output information
        run: |
          echo "run if job fail"
-         echo " run when any job fails"
+         echo "run when any job fails"
